@@ -1,16 +1,18 @@
 
-# Simple Regression Modeling with Boston Housing dataset - Lab
+# Simple Regression Modeling with the Boston Housing dataset - Lab
+
+## Introduction
 
 In this final lab, we shall apply the regression analysis and diagnostics techniques covered in this section to a familiar "Boston Housing" dataset. We performed a detailed EDA for this dataset in earlier section and hence carry a good understanding of how this dataset is composed. This this lab we shall try to identify the predictive ability of some of features found in this dataset towards identifying house price. 
 
-### Objectives:
+## Objectives
 You will be able to:
 * Build many linear models with boston housing data set using OLS
 * For each model, analyze OLS diagnostics for model validity 
 * Visually explain the results and interpret the diagnostics from Statsmodels 
 * Comment on the goodness of fit for a simple regression model
 
-Let's get started. 
+## Let's get started
 
 ### Import necessary libraries and load 'BostonHousing.csv' as pandas dataframe.
 
@@ -581,7 +583,7 @@ pd.DataFrame(results)
 So clearly the results are not highly reliable. the best good of fit i.e. r-squared is witnessed with `rm`. So clearly in this analysis this is our best predictor. 
 
 ---
-#### So how can we improve upon these results . 
+### So how can we improve upon these results
 1. Pre-Processing 
 
 This is where pre-processing of data comes in. Dealing with outliers, normalizing data, scaling values etc can help regression analysis get more meaningful results from the given set of data 
