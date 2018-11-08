@@ -178,10 +178,6 @@ boston.hist(figsize=(18,10) );
 ```
 
 
-![png](index_files/index_8_0.png)
-
-
-
 ```python
 # You observations here 
 
@@ -367,7 +363,7 @@ for idx, val in enumerate(['crim', 'dis', 'rm', 'zn', 'age']):
     fig = sm.graphics.qqplot(model.resid, dist=stats.norm, line='45', fit=True,   )
     plt.show()
     
-    results.append([val, model.rsquared, model.params[0], model.params[0], model.pvalues[1], sms.jarque_bera(model.resid)[0] ])
+    results.append([val, model.rsquared, model.params[0], model.params[1], model.pvalues[1], sms.jarque_bera(model.resid)[0] ])
     input("Press Enter to continue...")
 ```
 
@@ -507,7 +503,7 @@ pd.DataFrame(results)
       <td>crim</td>
       <td>0.15078</td>
       <td>24.0331</td>
-      <td>24.0331</td>
+      <td>-0.41519</td>
       <td>1.17399e-19</td>
       <td>295.404</td>
     </tr>
@@ -516,7 +512,7 @@ pd.DataFrame(results)
       <td>dis</td>
       <td>0.0624644</td>
       <td>18.3901</td>
-      <td>18.3901</td>
+      <td>1.09161</td>
       <td>1.20661e-08</td>
       <td>305.104</td>
     </tr>
@@ -525,7 +521,7 @@ pd.DataFrame(results)
       <td>rm</td>
       <td>0.483525</td>
       <td>-34.6706</td>
-      <td>-34.6706</td>
+      <td>9.10211</td>
       <td>2.48723e-74</td>
       <td>612.449</td>
     </tr>
@@ -534,7 +530,7 @@ pd.DataFrame(results)
       <td>zn</td>
       <td>0.129921</td>
       <td>20.9176</td>
-      <td>20.9176</td>
+      <td>0.14214</td>
       <td>5.71358e-17</td>
       <td>262.387</td>
     </tr>
@@ -543,7 +539,7 @@ pd.DataFrame(results)
       <td>age</td>
       <td>0.142095</td>
       <td>30.9787</td>
-      <td>30.9787</td>
+      <td>-0.123163</td>
       <td>1.56998e-18</td>
       <td>456.983</td>
     </tr>
