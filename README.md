@@ -25,7 +25,7 @@ The data features and target are present as columns in boston data. Boston data 
 
 
 ```python
-boston.head()
+# Your code here
 ```
 
 
