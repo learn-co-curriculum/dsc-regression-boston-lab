@@ -16,7 +16,7 @@ Let's get started.
 
 
 ```python
-# Your code here 
+# Your code here
 ```
 
 The data features and target are present as columns in boston data. Boston data gives a set of independent as independent variables in data and the housing rate as `MEDV` in target property. Also feature names are listed in feature_names. The desription is available at [KAGGLE](https://www.kaggle.com/c/boston-housing). 
@@ -25,7 +25,7 @@ The data features and target are present as columns in boston data. Boston data 
 
 
 ```python
-# Your code here 
+# Your code here
 ```
 
 
@@ -185,7 +185,7 @@ Based on this , we shall choose a selection of features which appear to be more 
 
 
 ```python
-# Your code here 
+# Your code here
 ```
 
 
@@ -322,7 +322,7 @@ Right here is the real deal. Let's perform a number of simple regression experim
 
 
 ```python
-# Your code here 
+# Your code here
 ```
 
     Boston Housing DataSet - Regression Analysis and Diagnostics for formula: medv~crim
@@ -461,7 +461,7 @@ pd.DataFrame(results)
       <td>crim</td>
       <td>0.15078</td>
       <td>24.0331</td>
-      <td>24.0331</td>
+      <td>-0.41519</td>
       <td>1.17399e-19</td>
       <td>295.404</td>
     </tr>
@@ -470,7 +470,7 @@ pd.DataFrame(results)
       <td>dis</td>
       <td>0.0624644</td>
       <td>18.3901</td>
-      <td>18.3901</td>
+      <td>1.09161</td>
       <td>1.20661e-08</td>
       <td>305.104</td>
     </tr>
@@ -479,7 +479,7 @@ pd.DataFrame(results)
       <td>rm</td>
       <td>0.483525</td>
       <td>-34.6706</td>
-      <td>-34.6706</td>
+      <td>9.10211</td>
       <td>2.48723e-74</td>
       <td>612.449</td>
     </tr>
@@ -488,7 +488,7 @@ pd.DataFrame(results)
       <td>zn</td>
       <td>0.129921</td>
       <td>20.9176</td>
-      <td>20.9176</td>
+      <td>0.14214</td>
       <td>5.71358e-17</td>
       <td>262.387</td>
     </tr>
@@ -497,7 +497,7 @@ pd.DataFrame(results)
       <td>age</td>
       <td>0.142095</td>
       <td>30.9787</td>
-      <td>30.9787</td>
+      <td>-0.123163</td>
       <td>1.56998e-18</td>
       <td>456.983</td>
     </tr>
