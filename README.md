@@ -1,5 +1,7 @@
 
-# Simple Regression Modeling with Boston Housing dataset - Lab
+# Project: Regression Modeling with the Boston Housing Dataset
+
+## Introduction
 
 In this final lab, we shall apply the regression analysis and diagnostics techniques covered in this section to a familiar "Boston Housing" dataset. We performed a detailed EDA for this dataset in earlier section and hence carry a good understanding of how this dataset is composed. This this lab we shall try to identify the predictive ability of some of features found in this dataset towards identifying house price. 
 
