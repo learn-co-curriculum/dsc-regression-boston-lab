@@ -1,5 +1,5 @@
 
-# Simple Regression Modeling with the Boston Housing dataset - Lab
+# Project: Regression Modeling with the Boston Housing Dataset
 
 ## Introduction
 
