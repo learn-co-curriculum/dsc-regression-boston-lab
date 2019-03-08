@@ -3,25 +3,25 @@
 
 ## Introduction
 
-In this final lab, we shall apply the regression analysis and diagnostics techniques covered in this section to a familiar "Boston Housing" dataset. We performed a detailed EDA for this dataset in earlier section and hence carry a good understanding of how this dataset is composed. This this lab we shall try to identify the predictive ability of some of features found in this dataset towards identifying house price. 
+In this final lab, you'll apply the regression analysis and diagnostics techniques covered in this section to the famous "Boston Housing" dataset. You performed a detailed EDA for this dataset earlier on, and hopefully you more or less recall how this data is structured! In this lab, you'll use some of the features in this dataset to create a linear model to predict the house price!
 
-### Objectives:
+## Objectives
 You will be able to:
-* Build many linear models with boston housing data set using OLS
-* For each model, analyze OLS diagnostics for model validity 
+* Build many linear models with the Boston housing data using OLS
+* Analyze OLS diagnostics for model validity 
 * Visually explain the results and interpret the diagnostics from Statsmodels 
 * Comment on the goodness of fit for a simple regression model
 
-Let's get started. 
+## Let's get started
 
-### Import necessary libraries and load 'BostonHousing.csv' as pandas dataframe.
+### Import necessary libraries and load 'BostonHousing.csv' as a pandas dataframe
 
 
 ```python
 # Your code here
 ```
 
-The data features and target are present as columns in boston data. Boston data gives a set of independent as independent variables in data and the housing rate as `MEDV` in target property. Also feature names are listed in feature_names. The desription is available at [KAGGLE](https://www.kaggle.com/c/boston-housing). 
+The columns in the Boston housing data represent the dependent and independent variables. The dependent variable here is the median house value `MEDV`. The desription of the other variables is available on [KAGGLE](https://www.kaggle.com/c/boston-housing). 
 
 ### Inspect the columns of the dataset and comment on type of variables present
 
@@ -165,7 +165,7 @@ The data features and target are present as columns in boston data. Boston data 
 
 ```
 
-### Create histograms for all variables in the dataset and comment on their shape (uniform or not ?)
+### Create histograms for all variables in the dataset and comment on their shape (uniform or not?)
 
 
 ```python
@@ -173,7 +173,7 @@ The data features and target are present as columns in boston data. Boston data 
 ```
 
 
-![png](index_files/index_8_0.png)
+![png](index_files/index_6_0.png)
 
 
 
@@ -182,7 +182,7 @@ The data features and target are present as columns in boston data. Boston data 
 
 ```
 
-Based on this , we shall choose a selection of features which appear to be more 'normal' than others.
+Based on this, we preselected some features  for you which appear to be more 'normal' than others.
 ### Create a new dataset with `['crim', 'dis', 'rm', 'zn', 'age', 'medv']`
 
 
@@ -271,7 +271,7 @@ Based on this , we shall choose a selection of features which appear to be more 
 
 
 
-### Check for linearity assumption for all chosen features with target variable using scatter plots and comment on the results
+### Check for linearity assumption for all chosen features with target variable using scatter plots
 
 
 ```python
@@ -279,23 +279,23 @@ Based on this , we shall choose a selection of features which appear to be more 
 ```
 
 
-![png](index_files/index_13_0.png)
+![png](index_files/index_11_0.png)
 
 
 
-![png](index_files/index_13_1.png)
+![png](index_files/index_11_1.png)
 
 
 
-![png](index_files/index_13_2.png)
+![png](index_files/index_11_2.png)
 
 
 
-![png](index_files/index_13_3.png)
+![png](index_files/index_11_3.png)
 
 
 
-![png](index_files/index_13_4.png)
+![png](index_files/index_11_4.png)
 
 
 
@@ -303,15 +303,15 @@ Based on this , we shall choose a selection of features which appear to be more 
 # Your observations here 
 ```
 
-Okie so obviously our data needs a lot of pre-procesing to improve the results. This key behind such kaggle competitions is to process the data in such a way that we can identify the relationships and make predictions in the best possible way. For now, we shall leave the dataset untouched and just move on with regression. So far, our assumptions, although not too strong, but still hold to a level that we can move on. 
+Clearly, your data needs a lot of pre-procesing to improve the results. This key behind a kaggle competition is to process the data in such a way that you can identify the relationships and make predictions in the best possible way. For now, we'll the dataset untouched and just move on with the regression. The assumptions are _exactly_ all fulfilled, but they still hold to a level that we can move on. 
 
 ### Let's do Regression 
 
-Right here is the real deal. Let's perform a number of simple regression experiments between the chosen independent variables and the dependent variable (price). We shall do this is a loop and in every iteration, we shall pick one of the independent variables  perform following steps:
+Now, let's perform a number of simple regression experiments between the chosen independent variables and the dependent variable (price). You'll do this in a loop and in every iteration, you should pick one of the independent variables. Perform following steps:
 
 * Run a simple OLS regression between independent and dependent variables
 * Plot a regression line on the scatter plots
-* Plot the residuals using `sm.graphics.plot_regress_exog()`.
+* Plot the residuals using `sm.graphics.plot_regress_exog()`
 * Plot a Q-Q plot for regression residuals normality test 
 * Store following values in array for each iteration:
     * Independent Variable
@@ -332,15 +332,15 @@ Right here is the real deal. Let's perform a number of simple regression experim
 
 
 
-![png](index_files/index_16_1.png)
+![png](index_files/index_14_1.png)
 
 
 
-![png](index_files/index_16_2.png)
+![png](index_files/index_14_2.png)
 
 
 
-![png](index_files/index_16_3.png)
+![png](index_files/index_14_3.png)
 
 
     Press Enter to continue...
@@ -349,15 +349,15 @@ Right here is the real deal. Let's perform a number of simple regression experim
 
 
 
-![png](index_files/index_16_5.png)
+![png](index_files/index_14_5.png)
 
 
 
-![png](index_files/index_16_6.png)
+![png](index_files/index_14_6.png)
 
 
 
-![png](index_files/index_16_7.png)
+![png](index_files/index_14_7.png)
 
 
     Press Enter to continue...
@@ -366,15 +366,15 @@ Right here is the real deal. Let's perform a number of simple regression experim
 
 
 
-![png](index_files/index_16_9.png)
+![png](index_files/index_14_9.png)
 
 
 
-![png](index_files/index_16_10.png)
+![png](index_files/index_14_10.png)
 
 
 
-![png](index_files/index_16_11.png)
+![png](index_files/index_14_11.png)
 
 
     Press Enter to continue...
@@ -383,15 +383,15 @@ Right here is the real deal. Let's perform a number of simple regression experim
 
 
 
-![png](index_files/index_16_13.png)
+![png](index_files/index_14_13.png)
 
 
 
-![png](index_files/index_16_14.png)
+![png](index_files/index_14_14.png)
 
 
 
-![png](index_files/index_16_15.png)
+![png](index_files/index_14_15.png)
 
 
     Press Enter to continue...
@@ -400,15 +400,15 @@ Right here is the real deal. Let's perform a number of simple regression experim
 
 
 
-![png](index_files/index_16_17.png)
+![png](index_files/index_14_17.png)
 
 
 
-![png](index_files/index_16_18.png)
+![png](index_files/index_14_18.png)
 
 
 
-![png](index_files/index_16_19.png)
+![png](index_files/index_14_19.png)
 
 
     Press Enter to continue...
@@ -515,23 +515,23 @@ pd.DataFrame(results)
 
 ```
 
-So clearly the results are not highly reliable. the best good of fit i.e. r-squared is witnessed with `rm`. So clearly in this analysis this is our best predictor. 
+Clearly, the results are not very reliable. The best R-Squared is witnessed with `rm`, so in this analysis, this is uour best predictor. 
 
----
-#### So how can we improve upon these results . 
-1. Pre-Processing 
+### How can you improve these results?
+1. Preprocessing 
 
-This is where pre-processing of data comes in. Dealing with outliers, normalizing data, scaling values etc can help regression analysis get more meaningful results from the given set of data 
+This is where preprocessing of data comes in. Dealing with outliers, normalizing data, scaling values etc. can help regression analysis get more meaningful results from the given data. 
 
 2. Advanced Analytical Methods
 
-Simple regression is a very basic analysis techniques and trying to fit a straight line solution to complex analytical questions may prove to be very inefficient. In the next section we shall look at multiple regression where we can use multiple features **AT ONCE** to define a relationship with outcome. We shall also look at some pre-processing and data simplification techniques and re-visit the boston dataset with an improved toolkit. 
+Simple regression is a very basic analysis techniques and trying to fit a straight line solution to complex analytical questions may prove to be very inefficient. Later on, you'll explore at multiple regression where you can use multiple features **at once** to define a relationship with the outcome. You'll also look at some preprocessing and data simplification techniques and re-isit the boston dataset with an improved toolkit. 
 
 ## Level up - Optional 
 
 Apply some data wrangling skills that you have learned in previous section to pre-process the set of independent variables we chose above. You can start off with outliers and think of a way to deal with them. See how it affects the the goodness of fit. 
-![](https://i.pinimg.com/originals/e5/a5/1e/e5a51eff1b2133105ebaa9b779106ae2.png)
+
+![](images/joke.png)
 
 ## Summary 
 
-In this lab, we attempted to bring in all the skills learnt so far to a slighlt detailed dataset. We looked at the outcome of our analysis and realized that the data might need some pre-processing to see a clear improvement in results. We shall pick it up in the next section from this point and bring in data pre-processing techniques along with some assumptions that are needed for multiple regression . 
+In this lab, you applied your skills learned so far on a new data set. You looked at the outcome of your analysis and realized that the data might need some preprocessing to see a clear improvement in results. You'll pick this back up later on, after learning about more preprocessing techniques and advanced modeling techniques.
