@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this final lab, you'll apply the regression analysis and diagnostics techniques covered in this section to the famous "Boston Housing" dataset. You performed a detailed EDA for this dataset earlier on, and hopefully you more or less recall how this data is structured! In this lab, you'll use some of the features in this dataset to create a linear model to predict the house price!
+In this final lab, you'll apply the regression analysis and diagnostics techniques covered in this section to the famous "Boston Housing" dataset. You performed a detailed EDA for this dataset earlier on, and hopefully, you more or less recall how this data is structured! In this lab, you'll use some of the features in this dataset to create a linear model to predict the house price!
 
 ## Objectives
 You will be able to:
@@ -21,7 +21,7 @@ You will be able to:
 # Your code here
 ```
 
-The columns in the Boston housing data represent the dependent and independent variables. The dependent variable here is the median house value `MEDV`. The desription of the other variables is available on [KAGGLE](https://www.kaggle.com/c/boston-housing). 
+The columns in the Boston housing data represent the dependent and independent variables. The dependent variable here is the median house value `MEDV`. The description of the other variables is available on [KAGGLE](https://www.kaggle.com/c/boston-housing). 
 
 ### Inspect the columns of the dataset and comment on type of variables present
 
@@ -303,11 +303,11 @@ Based on this, we preselected some features  for you which appear to be more 'no
 # Your observations here 
 ```
 
-Clearly, your data needs a lot of pre-procesing to improve the results. This key behind a kaggle competition is to process the data in such a way that you can identify the relationships and make predictions in the best possible way. For now, we'll the dataset untouched and just move on with the regression. The assumptions are _exactly_ all fulfilled, but they still hold to a level that we can move on. 
+Clearly, your data needs a lot of preprocessing to improve the results. This key behind a Kaggle competition is to process the data in such a way that you can identify the relationships and make predictions in the best possible way. For now, we'll the dataset untouched and just move on with the regression. The assumptions are _exactly_ all fulfilled, but they still hold to a level that we can move on. 
 
 ### Let's do Regression 
 
-Now, let's perform a number of simple regression experiments between the chosen independent variables and the dependent variable (price). You'll do this in a loop and in every iteration, you should pick one of the independent variables. Perform following steps:
+Now, let's perform a number of simple regression experiments between the chosen independent variables and the dependent variable (price). You'll do this in a loop and in every iteration, you should pick one of the independent variables. Perform the following steps:
 
 * Run a simple OLS regression between independent and dependent variables
 * Plot a regression line on the scatter plots
@@ -511,7 +511,7 @@ pd.DataFrame(results)
 
 
 ```python
-#Your obervations here 
+#Your observations here 
 
 ```
 
@@ -524,11 +524,11 @@ This is where preprocessing of data comes in. Dealing with outliers, normalizing
 
 2. Advanced Analytical Methods
 
-Simple regression is a very basic analysis techniques and trying to fit a straight line solution to complex analytical questions may prove to be very inefficient. Later on, you'll explore at multiple regression where you can use multiple features **at once** to define a relationship with the outcome. You'll also look at some preprocessing and data simplification techniques and re-isit the boston dataset with an improved toolkit. 
+Simple regression is a very basic analysis technique and trying to fit a straight line solution to complex analytical questions may prove to be very inefficient. Later on, you'll explore at multiple regression where you can use multiple features **at once** to define a relationship with the outcome. You'll also look at some preprocessing and data simplification techniques and revisit the Boston dataset with an improved toolkit. 
 
 ## Level up - Optional 
 
-Apply some data wrangling skills that you have learned in previous section to pre-process the set of independent variables we chose above. You can start off with outliers and think of a way to deal with them. See how it affects the the goodness of fit. 
+Apply some data wrangling skills that you have learned in the previous section to pre-process the set of independent variables we chose above. You can start off with outliers and think of a way to deal with them. See how it affects the goodness of fit. 
 
 ![](images/joke.png)
 
