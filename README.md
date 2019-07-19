@@ -530,8 +530,6 @@ Simple regression is a very basic analysis technique and trying to fit a straigh
 
 Apply some data wrangling skills that you have learned in the previous section to pre-process the set of independent variables we chose above. You can start off with outliers and think of a way to deal with them. See how it affects the goodness of fit. 
 
-![](images/joke.png)
-
 ## Summary 
 
 In this lab, you applied your skills learned so far on a new data set. You looked at the outcome of your analysis and realized that the data might need some preprocessing to see a clear improvement in results. You'll pick this back up later on, after learning about more preprocessing techniques and advanced modeling techniques.
