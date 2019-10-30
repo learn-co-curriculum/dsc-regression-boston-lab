@@ -3,14 +3,16 @@
 
 ## Introduction
 
-In this final lab, you'll apply the regression analysis and diagnostics techniques covered in this section to the famous "Boston Housing" dataset. You performed a detailed EDA for this dataset earlier on, and hopefully, you more or less recall how this data is structured! In this lab, you'll use some of the features in this dataset to create a linear model to predict the house price!
+In this lab, you'll apply the regression analysis and diagnostics techniques covered in this section to the "Boston Housing" dataset. You performed a detailed EDA for this dataset earlier on, and hopefully, you more or less recall how this data is structured! In this lab, you'll use some of the features in this dataset to create a linear model to predict the house price!
 
 ## Objectives
 You will be able to:
-* Build many linear models with the Boston housing data using OLS
-* Analyze OLS diagnostics for model validity 
-* Visually explain the results and interpret the diagnostics from Statsmodels 
-* Comment on the goodness of fit for a simple regression model
+* Perform a linear regression using statsmodels
+* Determine if a particular set of data exhibits the assumptions of linear regression
+* Evaluate a linear regression model by using statistical performance metrics pertaining to overall model and specific parameters
+* Use the coefficient of determination to determine model performance
+* Interpret the parameters of a simple linear regression model in relation to what they signify for specific data
+
 
 ## Let's get started
 
@@ -271,7 +273,7 @@ Based on this, we preselected some features  for you which appear to be more 'no
 
 
 
-### Check for linearity assumption for all chosen features with target variable using scatter plots
+### Check the linearity assumption for all chosen features with target variable using scatter plots
 
 
 ```python
@@ -303,7 +305,7 @@ Based on this, we preselected some features  for you which appear to be more 'no
 # Your observations here 
 ```
 
-Clearly, your data needs a lot of preprocessing to improve the results. This key behind a Kaggle competition is to process the data in such a way that you can identify the relationships and make predictions in the best possible way. For now, we'll the dataset untouched and just move on with the regression. The assumptions are _exactly_ all fulfilled, but they still hold to a level that we can move on. 
+Clearly, your data needs a lot of preprocessing to improve the results. This key behind a Kaggle competition is to process the data in such a way that you can identify the relationships and make predictions in the best possible way. For now, we'll use the dataset untouched and just move on with the regression. The assumptions are not _exactly_ all fulfilled, but they still hold to a level that we can move on. 
 
 ### Let's do Regression 
 
@@ -515,16 +517,16 @@ pd.DataFrame(results)
 
 ```
 
-Clearly, the results are not very reliable. The best R-Squared is witnessed with `rm`, so in this analysis, this is uour best predictor. 
+Clearly, the results are not very reliable. The best R-Squared is witnessed with `rm`, so in this analysis, this is our best predictor. 
 
 ### How can you improve these results?
 1. Preprocessing 
 
-This is where preprocessing of data comes in. Dealing with outliers, normalizing data, scaling values etc. can help regression analysis get more meaningful results from the given data. 
+This is where the preprocessing of data comes in. Dealing with outliers, normalizing data, scaling values etc. can help regression analysis get more meaningful results from the given data. 
 
 2. Advanced Analytical Methods
 
-Simple regression is a very basic analysis technique and trying to fit a straight line solution to complex analytical questions may prove to be very inefficient. Later on, you'll explore at multiple regression where you can use multiple features **at once** to define a relationship with the outcome. You'll also look at some preprocessing and data simplification techniques and revisit the Boston dataset with an improved toolkit. 
+Simple regression is a very basic analysis technique and trying to fit a straight line solution to complex analytical questions may prove to be very inefficient. Later on, you'll explore multiple regression where you can use multiple features **at once** to define a relationship with the outcome. You'll also look at some preprocessing and data simplification techniques and revisit the Boston dataset with an improved toolkit. 
 
 ## Level up - Optional 
 
@@ -532,4 +534,4 @@ Apply some data wrangling skills that you have learned in the previous section t
 
 ## Summary 
 
-In this lab, you applied your skills learned so far on a new data set. You looked at the outcome of your analysis and realized that the data might need some preprocessing to see a clear improvement in results. You'll pick this back up later on, after learning about more preprocessing techniques and advanced modeling techniques.
+In this lab, you applied your skills learned so far on a new data set. You looked at the outcome of your analysis and realized that the data might need some preprocessing to see a clear improvement in the results. You'll pick this back up later on, after learning about more preprocessing techniques and advanced modeling techniques.
