@@ -3,14 +3,16 @@
 
 ## Introduction
 
-In this final lab, you'll apply the regression analysis and diagnostics techniques covered in this section to the famous "Boston Housing" dataset. You performed a detailed EDA for this dataset earlier on, and hopefully, you more or less recall how this data is structured! In this lab, you'll use some of the features in this dataset to create a linear model to predict the house price!
+In this lab, you'll apply the regression analysis and diagnostics techniques covered in this section to the "Boston Housing" dataset. You performed a detailed EDA for this dataset earlier on, and hopefully, you more or less recall how this data is structured! In this lab, you'll use some of the features in this dataset to create a linear model to predict the house price!
 
 ## Objectives
 You will be able to:
-* Build many linear models with the Boston housing data using OLS
-* Analyze OLS diagnostics for model validity 
-* Visually explain the results and interpret the diagnostics from Statsmodels 
-* Comment on the goodness of fit for a simple regression model
+* Perform a linear regression using statsmodels
+* Determine if a particular set of data exhibits the assumptions of linear regression
+* Evaluate a linear regression model by using statistical performance metrics pertaining to overall model and specific parameters
+* Use the coefficient of determination to determine model performance
+* Interpret the parameters of a simple linear regression model in relation to what they signify for specific data
+
 
 ## Let's get started
 
@@ -314,7 +316,7 @@ boston.head()
 # __SOLUTION__ 
 # Record your observations here 
 # The dataset mostly contains continuous variables
-# cas and rad are only two categorical variables
+# chas and rad are the only two categorical variables
 # there are no null and missing values 
 ```
 
@@ -528,7 +530,7 @@ data.head()
 
 
 
-### Check for linearity assumption for all chosen features with target variable using scatter plots
+### Check the linearity assumption for all chosen features with target variable using scatter plots
 
 
 ```python
@@ -593,13 +595,13 @@ for column in ['crim', 'dis', 'rm', 'zn', 'age']:
 ```python
 # __SOLUTION__ 
 # Your observations here 
-# cim variable's linearity seemd a bit unclear as the values are too close to each other and generally very small
-# there is SOME linearity apparent in variables although the variance along y-axis is a bit unpredictable for some values
-# Some outliers present in almost all cases
+# Crim variable's linearity seemd a bit unclear as the values are too close to each other and generally very small
+# There is SOME linearity apparent in some variables although the variance along the y-axis is a bit unpredictable for some values
+# Some outliers are present in almost all cases
 # Data probably needs more normalization and pre-processing to "Clean it up"
 ```
 
-Clearly, your data needs a lot of preprocessing to improve the results. This key behind a Kaggle competition is to process the data in such a way that you can identify the relationships and make predictions in the best possible way. For now, we'll the dataset untouched and just move on with the regression. The assumptions are _exactly_ all fulfilled, but they still hold to a level that we can move on. 
+Clearly, your data needs a lot of preprocessing to improve the results. This key behind a Kaggle competition is to process the data in such a way that you can identify the relationships and make predictions in the best possible way. For now, we'll use the dataset untouched and just move on with the regression. The assumptions are not _exactly_ all fulfilled, but they still hold to a level that we can move on. 
 
 ### Let's do Regression 
 
@@ -1038,9 +1040,9 @@ pd.DataFrame(results)
 # Crime has a negative relationship with price i.e. less crime > higher price and vice vera
 # Crime does not show any clear signs heteroscedasticity 
 # Crime has a low r-squared so not such a good fit 
-# Residuals not normally distributed (needs log normalization that we'll see in next section)
+# Residuals are not normally distributed (needs log normalization that we'll see in next section)
 
-# a positive relationship between dis and medv
+# A positive relationship exists between dis and medv
 # dis residual plots show some signs of heteroscadasticity as cone shaped residuals
 # normality is still questionable 
 
@@ -1048,24 +1050,24 @@ pd.DataFrame(results)
 # rm residuals show no signs of heteroscdasticity however some outliers are present
 # rm qqplot shows a long right tail which hurts normality 
 
-# zn variable scatter shows a lot of variance  along y axis and hence gives a very slow r-swuared value
+# zn variable scatter shows a lot of variance along the y-axis and hence gives a very low r-squared value
 # no clear heteroscedasticity in residuals
-# Normality through Q-Q plots and JB is far from perfect 
+# normality through Q-Q plots and JB is far from perfect 
 
 # age has a negative relatioship with prices i.e. young people > expensive houses :o
 # Some obvious heteroscadasticity and normality is questionable.
 ```
 
-Clearly, the results are not very reliable. The best R-Squared is witnessed with `rm`, so in this analysis, this is uour best predictor. 
+Clearly, the results are not very reliable. The best R-Squared is witnessed with `rm`, so in this analysis, this is our best predictor. 
 
 ### How can you improve these results?
 1. Preprocessing 
 
-This is where preprocessing of data comes in. Dealing with outliers, normalizing data, scaling values etc. can help regression analysis get more meaningful results from the given data. 
+This is where the preprocessing of data comes in. Dealing with outliers, normalizing data, scaling values etc. can help regression analysis get more meaningful results from the given data. 
 
 2. Advanced Analytical Methods
 
-Simple regression is a very basic analysis technique and trying to fit a straight line solution to complex analytical questions may prove to be very inefficient. Later on, you'll explore at multiple regression where you can use multiple features **at once** to define a relationship with the outcome. You'll also look at some preprocessing and data simplification techniques and revisit the Boston dataset with an improved toolkit. 
+Simple regression is a very basic analysis technique and trying to fit a straight line solution to complex analytical questions may prove to be very inefficient. Later on, you'll explore multiple regression where you can use multiple features **at once** to define a relationship with the outcome. You'll also look at some preprocessing and data simplification techniques and revisit the Boston dataset with an improved toolkit. 
 
 ## Level up - Optional 
 
@@ -1073,4 +1075,4 @@ Apply some data wrangling skills that you have learned in the previous section t
 
 ## Summary 
 
-In this lab, you applied your skills learned so far on a new data set. You looked at the outcome of your analysis and realized that the data might need some preprocessing to see a clear improvement in results. You'll pick this back up later on, after learning about more preprocessing techniques and advanced modeling techniques.
+In this lab, you applied your skills learned so far on a new data set. You looked at the outcome of your analysis and realized that the data might need some preprocessing to see a clear improvement in the results. You'll pick this back up later on, after learning about more preprocessing techniques and advanced modeling techniques.
